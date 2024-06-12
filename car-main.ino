@@ -54,27 +54,25 @@ void runTest() {
   stop();
 }
 
+void setSensorsAnalog(){
+  // s1 = !isOnRange(leftExInfra.analog(), BLACK_READ_VALUE * 0.95f, BLACK_READ_VALUE * 1.05f);
+  // s2 = !isOnRange(leftInfra.analog(), BLACK_READ_VALUE * 0.95f, BLACK_READ_VALUE * 1.05f);
+  // s3 = !isOnRange(middleInfra.analog(), BLACK_READ_VALUE * 0.95f, BLACK_READ_VALUE * 1.05f);
+  // s4 = !isOnRange(rightInfra.analog(), BLACK_READ_VALUE * 0.95f, BLACK_READ_VALUE * 1.05f);
+  // s5 = !isOnRange(rightExInfra.analog(), BLACK_READ_VALUE * 0.95f, BLACK_READ_VALUE * 1.05f);
+}
+
 
 void setSensors() {
   s1 = !leftExInfra.digital();
   s2 = !leftInfra.digital();
   s3 = !middleInfra.digital();
   s4 = !rightInfra.digital();
-  s5 = !rightExInfra.digital();
-  //FOR ANALOG READ
-  // s1 = isOnRange(leftExInfra.analog(), BLACK_READ_VALUE * 0.95f, BLACK_READ_VALUE * 1.05f);
-  // s2 = isOnRange(leftInfra.analog(), BLACK_READ_VALUE * 0.95f, BLACK_READ_VALUE * 1.05f);
-  // s3 = isOnRange(middleInfra.analog(), BLACK_READ_VALUE * 0.95f, BLACK_READ_VALUE * 1.05f);
-  // s4 = isOnRange(rightInfra.analog(), BLACK_READ_VALUE * 0.95f, BLACK_READ_VALUE * 1.05f);
-  // s5 = isOnRange(rightExInfra.analog(), BLACK_READ_VALUE * 0.95f, BLACK_READ_VALUE * 1.05f);
+  s5 = !rightExInfra.digital();  
 }
 
 void setSensorsAndPrint() {
-  s1 = !leftExInfra.digital();
-  s2 = !leftInfra.digital();
-  s3 = !middleInfra.digital();
-  s4 = !rightInfra.digital();
-  s5 = !rightExInfra.digital();
+  setSensors();
   Serial.println(s1);
   Serial.println(s2);
   Serial.println(s3);
